@@ -13,10 +13,10 @@ import { DataService } from './data.service';
 export class AppComponent {
   data: Violations[];
 
-  constructor(private dataService: DataService) { }
+  // constructor(private dataService: DataService) { }
 
-  title = 'nqDaemon';
-  subtitle = 'Data Solutions';
+  title = 'nqDataSolutions';
+  subtitle = '~Better than tableau';
   charts = {
     piechart: 'Pie Chart',
     bargraph: 'Bar Graph'

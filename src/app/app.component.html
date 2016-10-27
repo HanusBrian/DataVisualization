@@ -1,16 +1,14 @@
 <div class="navbar">
     <h1>{{title}}</h1>
-    <h3>~{{subtitle}}</h3>
+    <h3>{{subtitle}}</h3>
 
   <nav>
     <a routerLink="/dashboard"><h2>{{navigator.dashboard}}</h2></a>
-    <a routerLink="/reports"><h2>{{navigator.reports}}</h2></a>
-    <a routerLink="/data"><h2>{{navigator.data}}</h2></a>
+    <!--<a routerLink="/reports"><h2>{{navigator.reports}}</h2></a>
+    <a routerLink="/data"><h2>{{navigator.data}}</h2></a>-->
     <a routerLink="/piechart"><h2>{{charts.piechart}}</h2></a>
     <a routerLink="/bargraph"><h2>{{charts.bargraph}}</h2></a>
   </nav>
 </div>
 
 <router-outlet></router-outlet>
-
-

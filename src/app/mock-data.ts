@@ -3,8 +3,8 @@ import { Violations } from './violations';
 export const DATA: Violations[] = [
     {
         critical: 123,
-        major: 84,
-        nonCritical: 23,
-        minor: 99
+        major: 684,
+        nonCritical: 223,
+        minor: 599
     }
 ]

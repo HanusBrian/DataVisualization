@@ -1,12 +1,40 @@
 .navbar {
     background-color: black;
     width: 100%;
+    height: 80px;
 }
 
 .navbar h1 {
     color: limegreen;
+    display: inline;
 }
 
 .navbar h3 {
-    color: limegreen;
+    color: greenyellow;
+    display: inline;
+}
+
+h2 {
+    display: inline;
+    
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+.nav-btn {
+    padding: 10px;
+    margin: 5px;
+    background-color: grey;
 }

@@ -1,27 +1,40 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { DataService } from './data.service';
+import { Violations } from './violations';
 
 @Component({
     selector: 'bargraph',
-    templateUrl: '/bargraph.component.html'
+    templateUrl: '/bargraph.component.html',
+    providers: [DataService]
 })
 
 export class BarGraphComponent {
 
     @ViewChild('bargraph') canvas: ElementRef;
 
-    constructor() { }
+    constructor(private dataService: DataService) { }
 
-    ngAfterViewInit() {
+    ngOnInit() {
+        this.initBarGraph();
+    }
 
-        let array: number[] = [123,157,86,45];
+    initBarGraph(): void {
+        this.dataService.getData().then(data => this.drawBarGraph(data));
+    }
+
+    drawBarGraph(violationsArray: Violations[]): void {
+        let array: number[] = [];
+
+        array.push(violationsArray[0].critical);
+        array.push(violationsArray[0].major);
+        array.push(violationsArray[0].nonCritical);
+        array.push(violationsArray[0].minor);
 
         let max: number = array.reduce((prev, curr) => { return Math.max(prev, curr); })
 
         let sigCat: number = 0;
         for (let i: number = 0; i < array.length; i++) {
-            if (array[i] != 0 && array[i] != null) {
-                sigCat++;
-            }
+            if (array[i] != 0 && array[i] != null) sigCat++;
         }
 
         let colors: string[] = ['#ff0000', '#ffcc00', '#ffff00', '#0000ff'];

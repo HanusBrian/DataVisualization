@@ -1,4 +1,7 @@
-import { Component, ViewChild, ElementRef, Input } from '@angular/core';
+import { Component, ViewChild, ElementRef, Input, OnInit } from '@angular/core';
+import { Violations } from './violations';
+
+import { DataService } from './data.service';
 
 @Component ({
     selector: 'piechart',
@@ -8,18 +11,25 @@ import { Component, ViewChild, ElementRef, Input } from '@angular/core';
 
 export class PieChartComponent {
     @ViewChild("canvas") canvas: ElementRef;
-    @Input() violations;
 
-    constructor() { }
+    constructor(private dataService: DataService) {}
 
-    ngAfterViewInit(){
-        let violationArray: number[];
-        if(this.violations != null) {
-            violationArray = this.violations;
-        }
-        else { 
-            violationArray = [1,1,1,1];
-        }
+    getData() { 
+        this.dataService.getData().then(data => this.drawPieChart(data))
+    }
+
+    ngOnInit() {
+        this.getData();
+    }
+
+    drawPieChart(data: Violations[]): void {
+        let violationArray: number[] = [];
+
+        violationArray.push(data[0].critical);
+        violationArray.push(data[0].major);
+        violationArray.push(data[0].nonCritical);
+        violationArray.push(data[0].minor);
+        
         let width: number = 200;
         let height: number = 200;
 
@@ -53,5 +63,9 @@ export class PieChartComponent {
             context.fill();
             prevEnd += pieArray[i][1] * (2 * Math.PI);
         }
+    }
+
+    ngAfterViewInit(){
+
     }
 }
