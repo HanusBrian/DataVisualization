@@ -1,0 +1,12 @@
+.navbar {
+    background-color: black;
+    width: 100%;
+}
+
+.navbar h1 {
+    color: limegreen;
+}
+
+.navbar h3 {
+    color: limegreen;
+}

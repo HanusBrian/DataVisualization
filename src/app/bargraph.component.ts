@@ -1,11 +1,11 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-    selector: 'bar-graph',
+    selector: 'bargraph',
     templateUrl: '/bargraph.component.html'
 })
 
-export class BarGraph {
+export class BarGraphComponent {
 
     @ViewChild('bargraph') canvas: ElementRef;
 

@@ -1,18 +1,25 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, Input } from '@angular/core';
 
 @Component ({
-    selector: 'pie-chart',
+    selector: 'piechart',
     templateUrl: './piechart.component.html',
     styles: ['./piechart.component.css']
 })
 
-export class PieChart {
+export class PieChartComponent {
     @ViewChild("canvas") canvas: ElementRef;
+    @Input() violations;
 
     constructor() { }
 
     ngAfterViewInit(){
-        let violationArray: number[] = [123,157,86,45];
+        let violationArray: number[];
+        if(this.violations != null) {
+            violationArray = this.violations;
+        }
+        else { 
+            violationArray = [1,1,1,1];
+        }
         let width: number = 200;
         let height: number = 200;
 

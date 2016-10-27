@@ -2,25 +2,32 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { ParaComponent } from './paragraph.component';
-import { PieChart } from './piechart.component';
-import { BarGraph } from './bargraph.component';
+import { DashboardComponent } from './dashboard.component';
+import { PieChartComponent } from './piechart.component';
+import { BarGraphComponent } from './bargraph.component';
+import { DataService } from './data.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParaComponent,
-    PieChart,
-    BarGraph
+    PieChartComponent,
+    BarGraphComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 
