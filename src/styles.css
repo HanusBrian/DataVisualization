@@ -3,3 +3,12 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.chart-container {
+    display: inline-block;
+    background-color: lightgrey;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid grey;
+    border-radius: 3px;
+}

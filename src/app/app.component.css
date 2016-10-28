@@ -2,6 +2,7 @@
     background-color: black;
     width: 100%;
     height: 80px;
+    margin-bottom: 60px;
 }
 
 .navbar h1 {
@@ -16,7 +17,6 @@
 
 h2 {
     display: inline;
-    
 }
 
 a {
@@ -34,6 +34,7 @@ a:hover {
 }
 
 .nav-btn {
+    display: inline-block;
     padding: 10px;
     margin: 5px;
     background-color: grey;
