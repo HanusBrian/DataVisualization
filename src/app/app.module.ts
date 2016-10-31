@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard.component';
 import { PieChartComponent } from './piechart.component';
 import { BarGraphComponent } from './bargraph.component';
+import { DataTableComponent } from './data-table.component';
+
 import { DataService } from './data.service';
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { DataService } from './data.service';
     AppComponent,
     PieChartComponent,
     BarGraphComponent,
-    DashboardComponent
+    DashboardComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,

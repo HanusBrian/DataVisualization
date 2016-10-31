@@ -19,11 +19,12 @@ export class AppComponent {
   subtitle = '~Better than tableau';
   charts = {
     piechart: 'Pie Chart',
-    bargraph: 'Bar Graph'
+    bargraph: 'Bar Graph',
+    datatable: 'Data Table'
   }
   navigator = {
     dashboard: 'Dashboard',
     reports: 'Reports',
-    data: 'Results'
+    data: 'Results',
   }
 }

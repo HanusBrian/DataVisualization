@@ -1,0 +1,13 @@
+<table #dataTable class="data-table">
+    <tr>
+        <th>QID</th>
+        <th>Question</th>
+        <th>Response</th>
+    </tr>
+    
+    <tr class="data" *ngFor="let question of questionData">
+        <td>{{question.questionId}}</td>
+        <td>{{question.questionText}}</td>
+        <td>{{question.questionResponse}}</td>
+    </tr>
+</table>
