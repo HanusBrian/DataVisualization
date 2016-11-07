@@ -20,7 +20,8 @@ export class AppComponent {
   charts = {
     piechart: 'Pie Chart',
     bargraph: 'Bar Graph',
-    datatable: 'Data Table'
+    datatable: 'Data Table',
+    svgpie: 'Interactive Pie Chart'
   }
   navigator = {
     dashboard: 'Dashboard',

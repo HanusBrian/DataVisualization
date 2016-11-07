@@ -10,10 +10,9 @@ import { DashboardComponent } from './dashboard.component';
 import { PieChartComponent } from './piechart.component';
 import { BarGraphComponent } from './bargraph.component';
 import { DataTableComponent } from './data-table.component';
+import { SvgPieComponent } from './svgPie.component';
 
 import { DataService } from './data.service';
-
-
 
 @NgModule({
   declarations: [
@@ -21,7 +20,8 @@ import { DataService } from './data.service';
     PieChartComponent,
     BarGraphComponent,
     DashboardComponent,
-    DataTableComponent
+    DataTableComponent,
+    SvgPieComponent
   ],
   imports: [
     BrowserModule,

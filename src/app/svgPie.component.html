@@ -1,16 +1,16 @@
+<div class="chart-container">
 <svg id="svgParent" 
         version="1.1" 
         baseProfile="full" 
         xmlns="http://www.w3.org/2000/svg" 
-        width="300" height="300">
+        [attr.width]="svgProp.width" [attr.height]="svgProp.height">
+        <!--[attr.width]="svgprop.width" [attr.height]="svgprop.height">-->
 
-    <path d="M 150 150
-            L 298 150
-            A 150 150 0 0 0 149 2 
-            Z" fill="blue" stroke="white" stroke-width="2" />
+    <svg:path *ngFor="let path of pathArr" 
+        [attr.d]="path.path"
+        [attr.fill]="path.fill"
+        [attr.stroke]="path.stroke"
+        [attr.stroke-width]="path.strokewidth" (click)="onSelect(path)"/>
 
-    <path d="M 150 150
-            L 298 150
-            A 150 150 0 0 1 149 298 
-            Z" fill="red" stroke="white" stroke-width="2" />
 </svg>
+</div>

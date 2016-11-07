@@ -2,9 +2,9 @@ import { Violations } from './violations';
 
 export const DATA: Violations[] = [
     {
-        critical: 800,
-        major: 684,
-        nonCritical: 223,
-        minor: 400
+        critical: 60,
+        major: 15,
+        nonCritical: 20,
+        minor: 5
     }
 ]

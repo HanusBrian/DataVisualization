@@ -30,8 +30,8 @@ export class PieChartComponent {
         violationArray.push(data[0].nonCritical);
         violationArray.push(data[0].minor);
         
-        let width: number = 200;
-        let height: number = 200;
+        let width: number = 300;
+        let height: number = 300;
 
         let pieArray: number[][] = [];
         let totalViolations: number = violationArray.reduce((prev, curr)=>{return prev + curr});
@@ -41,7 +41,7 @@ export class PieChartComponent {
 
         let centerX: number = Math.floor(width / 2);
         let centerY:number = Math.floor(height / 2);
-        let radius: number = 95;
+        let radius: number = 145;
         let prevEnd: number = 0;
         let newEnd: number = 0;
 
