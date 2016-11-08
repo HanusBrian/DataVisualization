@@ -92,7 +92,7 @@ export class SvgPieComponent {
     }
 
     onSelect(path) {
-        alert(path.numViolations);
+        alert("This selection has: " + path.numViolations + " Violations");
     }
 
 }

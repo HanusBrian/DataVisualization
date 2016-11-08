@@ -21,7 +21,9 @@ export class AppComponent {
     piechart: 'Pie Chart',
     bargraph: 'Bar Graph',
     datatable: 'Data Table',
-    svgpie: 'Interactive Pie Chart'
+    svgpie: 'Interactive Pie Chart',
+    brokenbar: 'Broken Bar Chart',
+    helptext: 'HelpText'
   }
   navigator = {
     dashboard: 'Dashboard',

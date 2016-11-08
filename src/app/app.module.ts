@@ -11,8 +11,11 @@ import { PieChartComponent } from './piechart.component';
 import { BarGraphComponent } from './bargraph.component';
 import { DataTableComponent } from './data-table.component';
 import { SvgPieComponent } from './svgPie.component';
+import { HelptextComponent } from './helptext.component';
+import { BrokenBarComponent } from './brokenbar.component';
 
 import { DataService } from './data.service';
+import { HelptextService } from './helptext.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { DataService } from './data.service';
     BarGraphComponent,
     DashboardComponent,
     DataTableComponent,
-    SvgPieComponent
+    SvgPieComponent,
+    HelptextComponent,
+    BrokenBarComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,7 @@ import { DataService } from './data.service';
     RouterModule,
     AppRoutingModule
   ],
-  providers: [ DataService ],
+  providers: [ DataService, HelptextService ],
   bootstrap: [AppComponent]
 })
 

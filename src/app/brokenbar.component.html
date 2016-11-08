@@ -1,0 +1,15 @@
+<div class="chart-container">
+<svg id="svgParent" 
+        version="1.1" 
+        baseProfile="full" 
+        xmlns="http://www.w3.org/2000/svg" 
+        [attr.width]="svgProp.width" [attr.height]="svgProp.height">
+
+    <svg:rect *ngFor="let bar of barArr" 
+        [attr.x]="bar.x"
+        [attr.y]="bar.y"
+        [attr.width]="bar.width"
+        [attr.height]="bar.height" (click)="onSelect(bar)"/>
+
+</svg>
+</div>
