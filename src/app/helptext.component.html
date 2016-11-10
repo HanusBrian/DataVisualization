@@ -1,14 +1,206 @@
-<table *ngFor="let data of helptextData">
-    <tr>
-        <td>{{data.questionText}}</td>
-    </tr>
-    <tr>
-        <td><span>Threshold: </span>{{data.threshold}}</td>
-    </tr>
-    <tr>
-        <td><span>Assessment: </span>{{data.assessment}}</td>
-    </tr>
-    <tr>
-        <td><span>Picklists: </span>{{data.picklist}}</td>
-    </tr>
-</table>
+<ul>
+	<li *ngFor="let data of helptextData" style="list-style-type: none;">
+		<html>
+
+		<head>
+			<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+			<meta name=Generator content="Microsoft Word 14 (filtered)">
+			<style>
+				<!--
+				/* Font Definitions */
+				
+				@font-face {
+					font-family: Wingdings;
+					panose-1: 5 0 0 0 0 0 0 0 0 0;
+				}
+				
+				@font-face {
+					font-family: Wingdings;
+					panose-1: 5 0 0 0 0 0 0 0 0 0;
+				}
+				
+				@font-face {
+					font-family: Calibri;
+					panose-1: 2 15 5 2 2 2 4 3 2 4;
+				}
+				/* Style Definitions */
+				
+				p.MsoNormal,
+				li.MsoNormal,
+				div.MsoNormal {
+					margin-top: 0in;
+					margin-right: 0in;
+					margin-bottom: 10.0pt;
+					margin-left: 0in;
+					line-height: 115%;
+					font-size: 11.0pt;
+					font-family: "Calibri", "sans-serif";
+				}
+				
+				p.MsoNoSpacing,
+				li.MsoNoSpacing,
+				div.MsoNoSpacing {
+					margin: 0in;
+					margin-bottom: .0001pt;
+					font-size: 11.0pt;
+					font-family: "Calibri", "sans-serif";
+				}
+				
+				span.EcoBoldChar {
+					mso-style-name: "Eco_Bold Char";
+					mso-style-link: Eco_Bold;
+					font-family: "Arial", "sans-serif";
+					font-weight: bold;
+				}
+				
+				p.EcoBold,
+				li.EcoBold,
+				div.EcoBold {
+					mso-style-name: Eco_Bold;
+					mso-style-link: "Eco_Bold Char";
+					margin: 0in;
+					margin-bottom: .0001pt;
+					font-size: 10.0pt;
+					font-family: "Arial", "sans-serif";
+					font-weight: bold;
+				}
+				
+				span.EcoBulletsChar {
+					mso-style-name: "Eco_Bullets Char";
+					mso-style-link: Eco_Bullets;
+					font-family: "Arial", "sans-serif";
+					color: black;
+				}
+				
+				p.EcoBullets,
+				li.EcoBullets,
+				div.EcoBullets {
+					mso-style-name: Eco_Bullets;
+					mso-style-link: "Eco_Bullets Char";
+					margin-top: 0in;
+					margin-right: 0in;
+					margin-bottom: 0in;
+					margin-left: 16.7pt;
+					margin-bottom: .0001pt;
+					text-indent: -13.5pt;
+					font-size: 9.0pt;
+					font-family: "Arial", "sans-serif";
+					color: black;
+				}
+				
+				p.msochpdefault,
+				li.msochpdefault,
+				div.msochpdefault {
+					mso-style-name: msochpdefault;
+					margin-right: 0in;
+					margin-left: 0in;
+					font-size: 12.0pt;
+					font-family: "Calibri", "sans-serif";
+				}
+				
+				p.msopapdefault,
+				li.msopapdefault,
+				div.msopapdefault {
+					mso-style-name: msopapdefault;
+					margin-right: 0in;
+					margin-bottom: 10.0pt;
+					margin-left: 0in;
+					line-height: 115%;
+					font-size: 12.0pt;
+					font-family: "Times New Roman", "serif";
+				}
+				
+				.MsoChpDefault {
+					font-size: 10.0pt;
+					font-family: "Calibri", "sans-serif";
+				}
+				
+				.MsoPapDefault {
+					margin-bottom: 10.0pt;
+					line-height: 115%;
+				}
+				
+				@page WordSection1 {
+					size: 8.5in 11.0in;
+					margin: 1.0in 1.0in 1.0in 1.0in;
+				}
+				
+				div.WordSection1 {
+					page: WordSection1;
+				}
+				/* List Definitions */
+				
+				ol {
+					margin-bottom: 0in;
+				}
+				
+				ul {
+					margin-bottom: 0in;
+				}
+				
+				-->
+			</style>
+
+		</head>
+
+		<body lang=EN-US>
+
+			<div class=WordSection1>
+
+				<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 align=left style='border-collapse:collapse;border:none;margin-left:6.75pt;margin-right:
+ 6.75pt'>
+					<tr>
+						<td width=638 valign=top [style.background]="data.color" style='width:6.65in;border:solid windowtext 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
+							<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  4.0pt;margin-left:0in;text-align:justify'><b><span style='font-family:"Arial","sans-serif"'>{{data.questionNum}}<span
+  style='color:green'>&nbsp; </span><span style='color:white' [innerHtml]="data.questionText"> </span></span></b></p>
+						</td>
+					</tr>
+					<tr>
+						<td width=638 valign=top style='width:6.65in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+							<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  4.0pt;margin-left:0in;line-height:normal'><b><span style='font-family:"Arial","sans-serif"'><br>
+  Threshold: </span></b><span style='font-family:"Arial","sans-serif";font-weight:normal'>{{data.threshold}}<b><br>
+  <br>
+  </b></span></p>
+						</td>
+					</tr>
+					<tr>
+						<td width=638 valign=top style='width:6.65in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+							<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  4.0pt;margin-left:0in;line-height:normal'><b><span style='font-family:"Arial","sans-serif"'><br>
+  Assessment:</span></b></p>
+							<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  4.0pt;line-height:normal'><span style='font-family:"Arial","sans-serif";color:black;font-weight:normal'>{{data.assessment}}</span></p>
+
+						</td>
+					</tr>
+					<tr style='height:110.15pt'>
+						<td width=638 valign=top style='width:6.65in;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt;height:110.15pt'>
+							<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  4.0pt;margin-left:0in;line-height:normal'><b><span style='font-family:"Arial","sans-serif"'><br>
+  Picklist:</span></b></p>
+
+							<ul>
+								<li *ngFor="let item of data.picklist" style="list-style-type: disc">
+
+									<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  4.0pt;line-height:normal'>
+
+										<span style='font-family:"Arial","sans-serif";color:black;font-weight:normal'>{{item}} </span></p>
+									<p class=MsoNormal style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  4.0pt;margin-left:57.2pt;line-height:normal'>
+								</li>
+							</ul>
+				</table>
+
+			</div>
+
+		</body>
+
+		</html>
+	</li>
+</ul>
