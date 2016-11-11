@@ -27,8 +27,7 @@ export class SvgPieComponent {
     pathArr: Object[] = [];
     dataArray: number[];
     
-    drawPie(data: Violations[]) {
-
+    drawPie(data: Violations[]): void {
         let total: number = 0;
         total += data[0].critical;
         total += data[0].major;
