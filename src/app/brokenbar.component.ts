@@ -31,25 +31,30 @@ export class BrokenBarComponent {
         let rectY: number = 0;
         let violationIndex: number = 0;
         let totalViolations: number = this.sumAllViolations(data);
-        let maxViolationType: number = this.getCountMaxViolationType(data);
+        let critTot = this.getViolationTypeTotal(data, 0);
+        let majTot = this.getViolationTypeTotal(data, 1);
+        let nonCTot = this.getViolationTypeTotal(data, 2);
+        let minTot = this.getViolationTypeTotal(data, 3);
+
+        let maxViolationType: number = Math.max(critTot, majTot, nonCTot, minTot);
+        let numScoreGroups:number = data.length;
+        let bufferSize: number = 2;
         let rectArr: Object[] = [];
 
-        for(let arr of data)
+        
+        let bufferPix: number = numScoreGroups * bufferSize;
+        let normBarSize = totalViolations - bufferPix;
+
+        for(let barlet of data)
         {
-            let rect = {x: rectX, y: rectY};
+            let rect = {};
 
-            violationIndex++;
+            let barWidth: number;
+            barWidth = barlet.
+
+
+     
         }
-    }
-
-    getCountMaxViolationType(data: Violations[]): number {
-        let max = 0;
-        let critTotal = this.getViolationTypeTotal(data, 0);
-        let majTotal = this.getViolationTypeTotal(data, 1);
-        let nonCTotal = this.getViolationTypeTotal(data, 2);
-        let minTotal = this.getViolationTypeTotal(data, 3);
-        max = Math.max(critTotal, majTotal, nonCTotal, minTotal);
-        return max;
     }
 
     getViolationTypeTotal(data: Violations[], index: number): number {
